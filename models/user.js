@@ -7,7 +7,9 @@ const UserSchema = new Schema({
     email: {type: String, required: true, maxLength: 100, index: {unique: true}},
     password: {type: String, require: true},
     first_name: {type: String, maxLength: 100},
-    first_name: {type: String, maxLength: 100}
+    last_name: {type: String, maxLength: 100}
+}, {
+    timestamps: true
 });
 
 UserSchema.pre('save', function(next){
